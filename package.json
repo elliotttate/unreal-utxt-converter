@@ -2,8 +2,8 @@
   "name": "unreal-utxt-converter",
   "displayName": "Unreal UTXT Converter",
   "description": "Convert Unreal Engine .uasset files to UTXT (Unreal Text) format and back. Supports UE4.27+ with proper class resolution and property deserialization.",
-  "author": "Your Name",
-  "repository": "https://github.com/yourusername/unreal-utxt-converter",
+  "author": "Elliott Tate",
+  "repository": "https://github.com/elliotttate/unreal-utxt-converter",
   "version": "1.0.0",
   "engines": {
     "vscode": "^1.93.0"

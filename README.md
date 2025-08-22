@@ -20,7 +20,7 @@ A Visual Studio Code extension for converting Unreal Engine `.uasset` files to U
 
 ### From VSIX Package
 
-1. Download the latest `.vsix` package from the [Releases](https://github.com/yourusername/unreal-utxt-converter/releases) page
+1. Download the latest `.vsix` package from the [Releases](https://github.com/elliotttate/unreal-utxt-converter/releases) page
 2. In VS Code, press `Ctrl+Shift+P` to open the command palette
 3. Type "Install from VSIX" and select "Extensions: Install from VSIX..."
 4. Browse to the downloaded `.vsix` file and install
@@ -29,7 +29,7 @@ A Visual Studio Code extension for converting Unreal Engine `.uasset` files to U
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/unreal-utxt-converter.git
+   git clone https://github.com/elliotttate/unreal-utxt-converter.git
    cd unreal-utxt-converter
    ```
 
@@ -197,7 +197,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 If you encounter any issues or have questions:
 
-1. Check the [Issues](https://github.com/yourusername/unreal-utxt-converter/issues) page
+1. Check the [Issues](https://github.com/elliotttate/unreal-utxt-converter/issues) page
 2. Create a new issue with detailed information about your problem
 3. Include sample files if possible (ensure no proprietary content)
 
