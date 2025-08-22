@@ -1,0 +1,114 @@
+{
+  "name": "unreal-utxt-converter",
+  "displayName": "Unreal UTXT Converter",
+  "description": "Convert Unreal Engine .uasset files to UTXT (Unreal Text) format and back. Supports UE4.27+ with proper class resolution and property deserialization.",
+  "author": "Your Name",
+  "repository": "https://github.com/yourusername/unreal-utxt-converter",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.93.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Other"
+  ],
+  "keywords": [
+    "unreal",
+    "unreal engine",
+    "uasset",
+    "utxt",
+    "ue4",
+    "ue5",
+    "blueprint",
+    "converter"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension-simplified.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "unrealutxt.toUTXT",
+        "title": "Convert UAsset to UTXT",
+        "category": "Unreal UTXT",
+        "icon": "$(file-text)"
+      },
+      {
+        "command": "unrealutxt.toUAsset",
+        "title": "Convert UTXT to UAsset",
+        "category": "Unreal UTXT",
+        "icon": "$(file-binary)"
+      },
+      {
+        "command": "unrealutxt.testRoundtrip",
+        "title": "Test Round-trip Conversion",
+        "category": "Unreal UTXT",
+        "icon": "$(testing-run-icon)"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "when": "resourceExtname == .utxt",
+          "command": "unrealutxt.toUAsset",
+          "group": "navigation"
+        }
+      ],
+      "explorer/context": [
+        {
+          "command": "unrealutxt.toUTXT",
+          "when": "resourceExtname == .uasset",
+          "group": "7_modification"
+        },
+        {
+          "command": "unrealutxt.toUAsset",
+          "when": "resourceExtname == .utxt",
+          "group": "7_modification"
+        },
+        {
+          "command": "unrealutxt.testRoundtrip",
+          "when": "resourceExtname == .uasset",
+          "group": "7_modification@2"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Unreal UTXT Converter",
+      "properties": {
+        "unrealutxt.showDebugOutput": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show debug output in the Output panel during conversion"
+        },
+        "unrealutxt.preserveRawData": {
+          "type": "boolean",
+          "default": true,
+          "description": "Preserve raw binary data for perfect round-trip conversion"
+        }
+      }
+    },
+    "languages": [
+      {
+        "id": "json",
+        "extensions": [".utxt"],
+        "aliases": ["Unreal Text", "UTXT"]
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@types/node": "20.x",
+    "@types/vscode": "^1.93.0",
+    "@typescript-eslint/eslint-plugin": "^8.3.0",
+    "@typescript-eslint/parser": "^8.3.0",
+    "@vscode/vsce": "^3.6.0",
+    "eslint": "^9.9.1",
+    "typescript": "^5.5.4"
+  },
+  "license": "MIT"
+}
